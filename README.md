@@ -24,30 +24,29 @@ Before you begin, ensure you have met the following requirements:
    git clone https://github.com/theminacious/youtube-backend.git
 Navigate to the project directory:
 
-bash
-Copy code
+ ```bash
 cd your-repo-name
+```
+# Install dependencies:
 
-#Install dependencies:
-
-##bash
+```bash
 npm install
-
+```
 # Set up environment variables:
 
 ## Create a .env file in the root directory
 Add the following environment variables and update them with your values:
-
+```
 PORT=3000
 MONGODB_URI=your-mongodb-uri
 JWT_SECRET=your-jwt-secret
-
+```
 # Usage
 ## Start the server:
 
-bash
+```bash
 npm start
-
+```
 ## Access the API endpoints using a tool like Postman or curl.
 
 API Documentation
