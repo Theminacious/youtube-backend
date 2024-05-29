@@ -77,5 +77,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 About the Author
 # Ankit Yadav
 
-GitHub: github.com/theminacious
+GitHub: [github.com/theminacious](https://github.com/theminacious)
 LinkedIn: Ankit Yadav
