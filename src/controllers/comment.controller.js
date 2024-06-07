@@ -141,7 +141,27 @@ const deleteComment = asyncHandler(async (req, res) => {
     // TODO: delete a comment
     // find video by its id
     // check if there is the comment
-    // check the comment is vali
+    
+    const video = await Video.findById(req.video?._id);
+    if (!video) {
+        throw new ApiError(404, "Video not found");
+    }
+    const comment = await (Comment.findById(req.comment?._id));
+    if (!comment) {
+    
+        throw new ApiError(404, "Comment not found");
+    }
+
+    // Ensure the comment belongs to the video (optional, based on your use case)   
+    if (!video.comments.includes(comment._id)) {
+        throw new ApiError(403, "Comment does not belong to this video");
+    }
+    
+    // Delete the comment
+    await comment.remove();
+    return res
+        .status(200)
+        .json(new ApiResponse(200, comment, "Comment deleted successfully"));
 })
 
 export {
